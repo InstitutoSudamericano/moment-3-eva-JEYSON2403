@@ -6,5 +6,7 @@ import org.springframework.stereotype.Repository
 
 @Repository
 interface FilmRepository:JpaRepository<Film, Long> {
+  fun findById(id: Long?):Film?
+
 
 }
