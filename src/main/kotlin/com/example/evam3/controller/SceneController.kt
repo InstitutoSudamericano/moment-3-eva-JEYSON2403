@@ -24,5 +24,24 @@ class SceneController {
   fun save (@RequestBody scene: Scene): ResponseEntity<*> {
     return ResponseEntity<Scene>(sceneService.save(scene), HttpStatus.CREATED)
   }
+  @PutMapping
+  fun update (@RequestBody scene: Scene):ResponseEntity<Scene> {
+    return ResponseEntity(sceneService.update(scene), HttpStatus.OK)
+  }
+  @PatchMapping
+  fun updateName (@RequestBody scene: Scene):ResponseEntity<Scene>{
+    return ResponseEntity(sceneService.update(scene), HttpStatus.OK)
+  }
+  @GetMapping("/{id}")
+  fun listById (@PathVariable("id") id: Long): ResponseEntity<*>{
+    return ResponseEntity(sceneService.listById (id), HttpStatus.OK)
+
+  }
+  @DeleteMapping("/delete/{id}")
+  fun delete (@PathVariable("id") id: Long):Boolean?{
+    return sceneService.delete(id)
+  }
+
+
 
 }

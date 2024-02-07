@@ -39,14 +39,6 @@ class FilmController {
   fun delete (@PathVariable("id") id: Long):Boolean?{
     return filmService.delete(id)
   }
-  @GetMapping
-  fun list ():ResponseEntity<*>{
-    return ResponseEntity(filmService.list(), HttpStatus.OK)
-  }
-  @PostMapping
-  fun save (@RequestBody film: Film):ResponseEntity<Film>{
-    return ResponseEntity(filmService.save(film), HttpStatus.OK)
-  }
-  
+
 
 }

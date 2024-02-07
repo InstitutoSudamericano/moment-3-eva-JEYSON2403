@@ -20,3 +20,4 @@ spring:
     username: rdmrogip
     password: rZJROwBPMPBgCHSHxEF-eruz1S8uS5_q
     driverClassName: org.postgresql.Driver
+
