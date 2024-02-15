@@ -1,7 +1,7 @@
 package com.example.evam3.service
 
 
-import com.example.evam3.entity.Film
+
 import com.example.evam3.entity.Scene
 import com.example.evam3.repository.SceneRepository
 import org.springframework.beans.factory.annotation.Autowired
@@ -65,7 +65,5 @@ class SceneService {
       throw ResponseStatusException(HttpStatus.NOT_FOUND,ex.message)
     }
   }
-
-
 
 }
